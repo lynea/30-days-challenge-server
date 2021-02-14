@@ -15,13 +15,15 @@ model User {
 }
 
 model Challenge {
-  id            Int     @default(autoincrement()) @id
+  id            Int        @default(autoincrement()) @id
   title         String
   description   String?
-  owner         User?   @relation(fields: [ownerId], references: [id])
+  owner         User?      @relation(fields: [ownerId], references: [id])
   ownerId       Int?
-  daysCompleted Int?
   month         Months?
+  daysCompleted DateTime[]
+  startDate     DateTime   @default(now())
+  endDate       DateTime?
 }
 
 enum Months {

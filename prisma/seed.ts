@@ -12,15 +12,18 @@ async function main() {
           {
             title: " stop smoking",
             description: "no more smokies for me :)",
+            month: "JANUARY",
           },
           {
             title: "databases",
             description:
               " do some awesome backend programming everyday for an hour",
+            month: "JANUARY",
           },
           {
             title: "running",
             description: "run 2 times for an hour every week",
+            month: "JANUARY",
           },
         ],
       },
@@ -36,6 +39,7 @@ async function main() {
         create: {
           title: "become awesome",
           description: "just become awesome",
+          month: "JANUARY",
         },
       },
     },

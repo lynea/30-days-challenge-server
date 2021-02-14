@@ -1,16 +1,11 @@
 import { Router } from "express";
-import {
-  getAllChallenges,
-  getChallengesById,
-  createChallenge,
-  deleteChallenge,
-} from "../controllers/challengeController";
+import { challenge } from "../controllers/challengeController";
 
 const router = Router();
 
 // /challenges
-router.route("/").get(getAllChallenges).post(createChallenge);
+router.route("/").get(challenge.getAll).post(challenge.create);
 
-router.route("/:id").get(getChallengesById).put(deleteChallenge);
+router.route("/:id").get(challenge.getById).put(challenge.upDateById);
 
 export default router;
